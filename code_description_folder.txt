@@ -1,1 +1,5 @@
 
+Code Folder Summary:
+- pipeline.py → Main script for preprocessing, training, evaluation, saving outputs
+- preprocessing.ipynb → Notebook for data cleaning and transformation
+- model_comparison.ipynb → Notebook for comparing Linear, Polynomial, and Random Forest models
