@@ -41,3 +41,11 @@ Target: Price (in NGN millions).
 - Expand dataset beyond Abuja
 - Fairness-aware ML
 - SHAP interpretability
+- ## Dataset Access Instructions
+
+The raw dataset (`abuja_real_estate.csv`) is excluded from this repository to keep the repo lightweight (see `.gitignore`).  
+To reproduce results:
+
+1. Download the dataset from Kaggle: [Nigeria Real Estate Dataset](https://www.kaggle.com/datasets) or another credible source.
+2. Save the file as `abuja_real_estate.csv`.
+3. Place the file inside the `data/` folder of this project:
