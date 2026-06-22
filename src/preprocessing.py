@@ -1,9 +1,16 @@
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
+from sklearn.compose import ColumnTransformer
 
-def load_and_preprocess(path):
+def load_data(path="data/abuja_real_estate.csv"):
     df = pd.read_csv(path)
-    df = df.dropna()
-    scaler = StandardScaler()
-    df[['feature1','feature2']] = scaler.fit_transform(df[['feature1','feature2']])
     return df
+
+def build_preprocessor():
+    categorical = ['location']
+    numeric = ['floor_area','bedrooms','bathrooms','year_built']
+    preprocessor = ColumnTransformer([
+        ('cat', OneHotEncoder(), categorical),
+        ('num', MinMaxScaler(), numeric)
+    ])
+    return preprocessor
